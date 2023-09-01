@@ -2,10 +2,12 @@
   <h2 class="home_title">Welcome on our angular quiz made for Angular learning</h2>
   <p class="home_presentation">This quiz is made for learning Angular. It's a simple quiz with 10 questions.</p>
   <section class="home_questions-list">
-    <section class="home_questions-answers" *ngFor="let content of quizContent">
-      <h4 class="home_question"><b>Question 1 :</b> {{ content.question }}</h4>
+    <section class="home_questions-answers" *ngFor="let content of quizContent; let i = index">
+      <h4 class="home_question"><b>Question {{ i + 1 }} :</b> {{ content.question }}</h4>
       <ul class="home_answers">
-        <li *ngFor="let answer of content.answers"><button>A. {{ answer }}</button></li>
+        <li *ngFor="let answer of content.answers; let j = index">
+          <button><span>{{ getAnswerLetter(j) }}.</span> {{ answer }}</button>
+        </li>
       </ul>
     </section>
   </section>

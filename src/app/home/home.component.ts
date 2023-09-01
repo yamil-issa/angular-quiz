@@ -98,4 +98,8 @@ export class HomeComponent {
       ]
     }
   ];
+
+  getAnswerLetter(j: number) {
+    return String.fromCharCode(65 + j);
+  }
 }
