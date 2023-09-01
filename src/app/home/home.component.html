@@ -2,94 +2,10 @@
   <h2 class="home_title">Welcome on our angular quiz made for Angular learning</h2>
   <p class="home_presentation">This quiz is made for learning Angular. It's a simple quiz with 10 questions.</p>
   <section class="home_questions-list">
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 1 :</b> Quel est le principal avantage des composants dans Angular ?</h4>
+    <section class="home_questions-answers" *ngFor="let content of quizContent">
+      <h4 class="home_question"><b>Question 1 :</b> {{ content.question }}</h4>
       <ul class="home_answers">
-        <li><button>A. Accélérer le temps de chargement de la page</button></li>
-        <li><button>B. Encapsulation et réutilisabilité du code</button></li>
-        <li><button>C. Facilité de déploiement</button></li>
-        <li><button>D. Optimisation du SEO</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 2 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 3 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 4 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 5 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 6 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 7 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 8 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 9 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
-      </ul>
-    </section>
-    <section class="home_questions-answers">
-      <h4 class="home_question"><b>Question 10 :</b> Quelle commande utilise-t-on pour créer un nouveau projet Angular ?</h4>
-      <ul class="home_answers">
-        <li><button>A. `ng new mon-projet`</button></li>
-        <li><button>B. `npm start mon-projet`</button></li>
-        <li><button>C. `angular create mon-projet`</button></li>
-        <li><button>D. `npm init mon-projet`</button></li>
+        <li *ngFor="let answer of content.answers"><button>A. {{ answer }}</button></li>
       </ul>
     </section>
   </section>
