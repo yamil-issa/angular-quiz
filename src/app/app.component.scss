@@ -1,0 +1,23 @@
+:host {
+  @apply h-full w-full flex flex-col;
+}
+
+.header {
+  @apply bg-violet-500 text-white p-4;
+
+  h1 {
+    @apply text-2xl font-bold;
+  }
+}
+
+.main {
+  @apply flex-1 p-8;
+}
+
+.footer {
+  @apply bg-slate-800 text-slate-50 p-4;
+
+  a {
+    @apply text-violet-300 hover:text-violet-500;
+  }
+}

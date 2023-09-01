@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+  @apply h-full w-full m-0 p-0 font-sans bg-white;
+}
+
+body {
+  @apply flex flex-col;
+}
