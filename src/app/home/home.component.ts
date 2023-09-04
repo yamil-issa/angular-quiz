@@ -259,7 +259,6 @@ export class HomeComponent {
       return;
     }
     this.playerAnswers.push({questionId, answer});
-    console.log(this.playerAnswers);
   }
 
   isAnswerSelected(answer: string, id: number) {
