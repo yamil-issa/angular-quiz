@@ -7,11 +7,13 @@ import { QuizService } from "../shared/services/quiz.service";
   styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent {
-  quizContent = this.quizService.quizContent;
+  quizContent: any[] = this.quizService.quizContent;
   isQuizFinished = this.quizService.isQuizFinished;
   score = this.quizService.score;
 
-  constructor(private quizService: QuizService) {}
+  constructor(private quizService: QuizService) {
+    this.quizService.getQuizContent();
+  }
 
   getAnswerLetter(j: number) {
     return String.fromCharCode(65 + j);
