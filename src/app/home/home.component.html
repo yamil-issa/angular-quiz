@@ -1,27 +1,5 @@
-<section>
+<section class="home">
   <h2 class="home_title">Welcome on our angular quiz made for Angular learning</h2>
   <p class="home_presentation">This quiz is made for learning Angular. It's a simple quiz with 10 questions.</p>
-  <section class="home_questions-list">
-    <section class="home_questions-answers" *ngFor="let content of quizContent; let i = index">
-      <h4 class="home_question"><b>Question {{ i + 1 }} :</b> {{ content.question }}</h4>
-      <ul class="home_answers">
-        <li *ngFor="let answer of content.answers; let j = index">
-          <button
-            [disabled]="isQuizFinished"
-            (click)="addAnswer(answer.answer, content.id)"
-            [class.home_answers--selected]="isAnswerSelected(answer.answer, content.id)"
-          >
-            <span>{{ getAnswerLetter(j) }}.</span> {{ answer.answer }}
-          </button>
-        </li>
-      </ul>
-    </section>
-  </section>
-  <div class="home_validation">
-    <button (click)="checkAnswers()">Send</button>
-  </div>
-  <section class="home_score" *ngIf="isQuizFinished">
-    <h3>Voici votre score :</h3>
-    <span>{{ score }} / {{ quizContent.length }}</span>
-  </section>
+  <button class="home_quiz-btn btn--outline" routerLink="quiz">Start Quiz</button>
 </section>
