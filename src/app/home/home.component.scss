@@ -9,6 +9,15 @@
     @apply text-center;
   }
 
+  &_form {
+    label {
+      @apply mr-2 text-violet-500 font-bold;
+    }
+    input {
+      @apply border border-violet-500 px-4 py-2 rounded mr-2;
+    }
+  }
+
   &_quiz-btn {
     @apply my-8
   }

@@ -22,5 +22,12 @@ body {
     span {
       @apply text-violet-200;
     }
+    &:disabled {
+      @apply cursor-not-allowed opacity-50;
+    }
+  }
+
+  &:disabled {
+    @apply cursor-not-allowed opacity-50;
   }
 }

@@ -11,6 +11,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ResultComponent } from './quiz/result/result.component';
 import { QuestionComponent } from './quiz/question/question.component';
 import { AnswerComponent } from './quiz/answer/answer.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,11 +24,12 @@ import { AnswerComponent } from './quiz/answer/answer.component';
     QuestionComponent,
     AnswerComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

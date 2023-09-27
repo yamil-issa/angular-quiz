@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from "@angular/router";
 import { QuizService } from "../shared/services/quiz.service";
 
 @Component({
@@ -7,9 +7,22 @@ import { QuizService } from "../shared/services/quiz.service";
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss']
 })
-export class QuizComponent {
+export class QuizComponent implements OnInit {
   isQuizFinished = this.quizService.isQuizFinished;
-  constructor(private quizService: QuizService, private router: Router) { }
+  playerName = '';
+
+  constructor(
+    private quizService: QuizService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.quizService.playerName = params['playerName'];
+      this.playerName = params['playerName'];
+    });
+  }
 
   goToResultPage() {
     this.router.navigate(['/result']);

@@ -10,7 +10,7 @@ const routes: Routes = [
     component : HomeComponent
   },
   {
-    path: 'quiz',
+    path: 'quiz/:playerName',
     component : QuizComponent
   },
   {
