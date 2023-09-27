@@ -5,20 +5,7 @@
     <button class="btn--outline">Reset</button>
   </section>
   <section class="quiz_questions-list">
-    <section class="quiz_questions-answers" *ngFor="let content of quizContent; let i = index">
-      <h4 class="quiz_question"><b>Question {{ i + 1 }} :</b> {{ content?.question }}</h4>
-      <ul class="quiz_answers">
-        <li *ngFor="let answer of content?.answers; let j = index">
-          <button
-            [disabled]="isQuizFinished"
-            (click)="addAnswer(answer?.answerLabel, content.id)"
-            [class.quiz_answers--selected]="isAnswerSelected(answer?.answerLabel, content?.id)"
-          >
-            <span>{{ getAnswerLetter(j) }}.</span> {{ answer?.answerLabel }}
-          </button>
-        </li>
-      </ul>
-    </section>
+    <app-question></app-question>
   </section>
   <div class="quiz_validation">
     <button (click)="goToResultPage()" class="btn">Show score</button>
