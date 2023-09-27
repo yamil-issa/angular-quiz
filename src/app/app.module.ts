@@ -10,6 +10,7 @@ import { QuizComponent } from "./quiz/quiz.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ResultComponent } from './quiz/result/result.component';
 import { QuestionComponent } from './quiz/question/question.component';
+import { AnswerComponent } from './quiz/answer/answer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuestionComponent } from './quiz/question/question.component';
     FooterComponent,
     QuizComponent,
     ResultComponent,
-    QuestionComponent
+    QuestionComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

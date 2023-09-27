@@ -1,14 +1,4 @@
 <section class="question_container" *ngFor="let content of quizContent; let i = index">
   <h4 class="question_label"><b>Question {{ i + 1 }} :</b> {{ content?.question }}</h4>
-  <ul class="question_answers">
-    <li *ngFor="let answer of content?.answers; let j = index">
-      <button
-        [disabled]="isQuizFinished"
-        (click)="addAnswer(answer?.answerLabel, content.id)"
-        [class.question_answers--selected]="isAnswerSelected(answer?.answerLabel, content?.id)"
-      >
-        <span>{{ getAnswerLetter(j) }}.</span> {{ answer?.answerLabel }}
-      </button>
-    </li>
-  </ul>
+  <app-answer [answers]="content?.answers" [questionId]="content?.id"></app-answer>
 </section>
