@@ -1,5 +1,9 @@
 <section>
   <h2 class="quiz_title">Let's play !</h2>
+  <section class="quiz_reset" *ngIf="isQuizFinished">
+    <h3>You can see your answers</h3>
+    <button class="btn--outline">Reset</button>
+  </section>
   <section class="quiz_questions-list">
     <section class="quiz_questions-answers" *ngFor="let content of quizContent; let i = index">
       <h4 class="quiz_question"><b>Question {{ i + 1 }} :</b> {{ content?.question }}</h4>
@@ -17,10 +21,6 @@
     </section>
   </section>
   <div class="quiz_validation">
-    <button (click)="checkAnswers()">Send</button>
+    <button (click)="goToResultPage()" class="btn">Show score</button>
   </div>
-  <section class="quiz_score" *ngIf="isQuizFinished">
-    <h3>Voici votre score :</h3>
-    <span>{{ score }} / {{ quizContent.length }}</span>
-  </section>
 </section>

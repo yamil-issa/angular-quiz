@@ -1,0 +1,9 @@
+<section class="result">
+  <h2 class="result_title">Ready to see your score?</h2>
+  <section class="result_score">
+    <h3>Your score is:</h3>
+    <span>{{ score }}/{{ scoreTotal }}</span>
+  </section>
+  <button (click)="goToHome()" class="btn">Ready again?</button>
+  <img class="result_gif" [src]="getGifUrl()" alt="">
+</section>

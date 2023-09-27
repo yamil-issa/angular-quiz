@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { QuizComponent } from "./quiz/quiz.component";
 import { HttpClientModule } from "@angular/common/http";
+import { ResultComponent } from './quiz/result/result.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from "@angular/common/http";
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    QuizComponent
+    QuizComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

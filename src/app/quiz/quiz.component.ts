@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { QuizService } from "../shared/services/quiz.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-quiz',
@@ -11,7 +12,7 @@ export class QuizComponent {
   isQuizFinished = this.quizService.isQuizFinished;
   score = this.quizService.score;
 
-  constructor(private quizService: QuizService) {
+  constructor(private quizService: QuizService, private router: Router) {
     this.quizService.getQuizContent();
   }
 
@@ -33,5 +34,9 @@ export class QuizComponent {
     const isAnswered = this.quizService.playerAnswers.find((a) => a.questionId === id);
     if (!isAnswered) return false;
     return isAnswered.answer === answer;
+  }
+
+  goToResultPage() {
+    this.router.navigate(['/result']);
   }
 }

@@ -19,7 +19,7 @@ export class QuizService {
       if (!question) continue;
       for (let j = 0; j < question.answers.length; j++) {
         const currentAnswer = question.answers[j];
-        if (currentAnswer?.isCorrect && this.playerAnswers[i].answer === currentAnswer.answer) {
+        if (currentAnswer.isCorrect && this.playerAnswers[i].answer === currentAnswer.answerLabel) {
           this.score += 1;
           break;
         }
@@ -49,5 +49,12 @@ export class QuizService {
         });
       }
     });
+  }
+
+  resetQuiz() {
+    this.quizContent = [];
+    this.playerAnswers = [];
+    this.score = 0;
+    this.isQuizFinished = false;
   }
 }
