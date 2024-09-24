@@ -1,0 +1,46 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+  > div.field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: fit-content;
+
+    > input:focus-visible {
+      outline: none;
+    }
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .categories-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+    gap: 20px;
+
+    > .category {
+      padding: 10px 20px;
+      border-radius: 20px;
+      background: rgb(139 92 246 / var(--tw-bg-opacity));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+
+      &:hover {
+        background: rgb(139 92 246 / 0.8);
+        cursor: pointer;
+      }
+    }
+  }
+}
