@@ -4,7 +4,12 @@ section {
   gap: 40px;
   align-items: center;
 
-  > div.field {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+   div.field {
     display: flex;
     align-items: center;
     border: 1px solid #000;
@@ -19,7 +24,12 @@ section {
     > svg {
       width: 20px;
       height: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
   }
 
   .categories-list {

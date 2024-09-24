@@ -30,4 +30,9 @@ export class CategoriesComponent {
       this.categoriesList = result;
     });
   }
+
+  resetForm() {
+    this.categoryService.resetSearch();
+    this.searchBar = this.categoryService.searchBar;
+  }
 }
