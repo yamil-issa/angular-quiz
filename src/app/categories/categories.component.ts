@@ -34,5 +34,6 @@ export class CategoriesComponent {
   resetForm() {
     this.categoryService.resetSearch();
     this.searchBar = this.categoryService.searchBar;
+    this.getCategories();
   }
 }
