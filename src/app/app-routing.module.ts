@@ -17,11 +17,15 @@ const routes: Routes = [
     component: QuizComponent,
   },
   {
+    path: 'quiz/:playerName/:categoryId',
+    component: QuizComponent,
+  },
+  {
     path: 'result',
     component: ResultComponent,
   },
   {
-    path: 'categories',
+    path: 'categories/:playerName',
     component: CategoriesComponent,
   },
   {

@@ -1,13 +1,7 @@
 <section class="home">
   <h2 class="home_title">Bienvenue sur ce quiz</h2>
   <p class="home_presentation">Ce quiz a pour but éducatif</p>
-  <a
-    class="home_categories"
-    routerLink="/categories"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >Choisir une catégorie</a
-  >
+
   <!--  <form action="" class="home_form" *ngIf="!this.playerName.length">-->
   <form action="" class="home_form">
     <label for="name">Pseudo</label>
@@ -20,6 +14,13 @@
       required
     />
   </form>
+  <button
+    class="home_category-btn btn--outline"
+    (click)="navigateToQuizCategory()"
+    [disabled]="isPlayerNameFill"
+  >
+    Choisir une catégorie
+  </button>
   <button
     class="home_quiz-btn btn--outline"
     (click)="navigateToQuiz()"

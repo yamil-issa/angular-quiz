@@ -37,7 +37,6 @@
       "categoryName": "Directives and DOM Manipulation"
     }
   ],
-
   "questions": [
     {
       "id": 1,
@@ -140,7 +139,6 @@
       "categoryId": 6
     }
   ],
-
   "answers": [
     {
       "questionId": 1,
@@ -558,6 +556,11 @@
       "username": "test",
       "password": "test",
       "id": 3
+    },
+    {
+      "username": "lala",
+      "password": "yu",
+      "id": 4
     }
   ]
 }
