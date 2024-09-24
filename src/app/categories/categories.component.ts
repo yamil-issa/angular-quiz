@@ -8,6 +8,7 @@ import { category, CategoryService } from '../shared/services/category.service';
 })
 export class CategoriesComponent {
   categoriesList: category[] = [];
+  searchBar: string = '';
 
   constructor(private categoryService: CategoryService) {}
 
@@ -17,4 +18,12 @@ export class CategoriesComponent {
       console.log(this.categoriesList);
     });
   }
+
+  getCategories() {
+    this.categoryService.searchBar = this.searchBar;
+    this.categoryService.getCategory().subscribe((result: any) => {
+      this.categoriesList = result;
+    });
+  }
 }
+

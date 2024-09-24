@@ -1,6 +1,9 @@
 <section>
   <div class="field">
-    <input placeholder="Entrez une catégorie" />
+    <input
+    placeholder="Entrez une catégorie"
+    [(ngModel)]="searchBar"
+     />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="#000000"
@@ -13,6 +16,12 @@
       />
     </svg>
   </div>
+  <button
+    class="btn--outline"
+    (click)="getCategories()"
+  >
+  Validate
+  </button>
 
   <div class="categories-list">
     <app-category-card

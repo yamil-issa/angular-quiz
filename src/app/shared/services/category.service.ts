@@ -11,7 +11,7 @@ export class CategoryService {
   constructor(private http: HttpClient) {}
 
   getCategory() {
-    return this.http.get<category>(
+    return this.http.get<category[]>(
       this.searchBar.length > 0
         ? `http://localhost:3000/categories?categoryName=${this.searchBar}`
         : 'http://localhost:3000/categories'
