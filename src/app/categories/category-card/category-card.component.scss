@@ -1,0 +1,12 @@
+.category {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rebeccapurple;
+  color: white;
+  text-align: center;
+
+  &:hover {
+    background-color: #9430d2;
+    cursor: pointer;
+  }
+}

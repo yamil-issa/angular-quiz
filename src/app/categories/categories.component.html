@@ -15,23 +15,9 @@
   </div>
 
   <div class="categories-list">
-    <div class="category">
-      <span>TEST</span>
-    </div>
-    <div class="category">
-      <span>TEST</span>
-    </div>
-    <div class="category">
-      <span>TEST</span>
-    </div>
-    <div class="category">
-      <span>TEST</span>
-    </div>
-    <div class="category">
-      <span>TEST</span>
-    </div>
-    <div class="category">
-      <span>TEST</span>
-    </div>
+    <app-category-card
+      *ngFor="let category of categoriesList"
+      [category]="category"
+    ></app-category-card>
   </div>
 </section>
