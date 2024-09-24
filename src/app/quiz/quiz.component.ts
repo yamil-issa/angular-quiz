@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { QuizService } from '../shared/services/quiz.service';
+import { CategoryService } from '../shared/services/category.service';
 
 @Component({
   selector: 'app-quiz',
@@ -10,10 +11,12 @@ import { QuizService } from '../shared/services/quiz.service';
 export class QuizComponent implements OnInit {
   isQuizFinished = this.quizService.isQuizFinished;
   playerName = '';
-  categoryId = '';
+  categoryId: string = '';
+  categoryName: string = '';
 
   constructor(
     private quizService: QuizService,
+    private categoryService: CategoryService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -25,6 +28,13 @@ export class QuizComponent implements OnInit {
       this.categoryId = params['categoryId'];
 
       this.quizService.setCategoryId(this.categoryId);
+
+      this.categoryId &&
+        this.categoryService
+          .getCategoryById(parseInt(this.categoryId))
+          .subscribe((result: any) => {
+            this.categoryName = result.categoryName;
+          });
     });
   }
 

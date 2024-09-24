@@ -18,6 +18,10 @@ export class CategoryService {
     );
   }
 
+  getCategoryById(id: number) {
+    return this.http.get<category>(`http://localhost:3000/categories/${id}`);
+  }
+
   resetSearch() {
     this.searchBar = '';
   }
